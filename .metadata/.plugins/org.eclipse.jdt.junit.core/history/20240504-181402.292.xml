@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="java" project="gerenciadorApi" tests="3" started="3" failures="1" errors="1" ignored="0">
+  <testsuite name="com.cjhsoftware.gerenciadorApi.GerenciadorApiApplicationTests" time="1.014" displayname="GerenciadorApiApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.cjhsoftware.gerenciadorApi.GerenciadorApiApplicationTests]">
+    <testcase name="contextLoads" classname="com.cjhsoftware.gerenciadorApi.GerenciadorApiApplicationTests" time="1.014" displayname="contextLoads()" uniqueid="[engine:junit-jupiter]/[class:com.cjhsoftware.gerenciadorApi.GerenciadorApiApplicationTests]/[method:contextLoads()]"/>
+  </testsuite>
+  <testsuite name="com.cjhsoftware.gerenciadorApi.domain.repository.TarefaRepositoryTest" time="0.244" displayname="TarefaRepositoryTest" uniqueid="[engine:junit-jupiter]/[class:com.cjhsoftware.gerenciadorApi.domain.repository.TarefaRepositoryTest]">
+    <testcase name="SalvaTarefaNoBDcomSucesso" classname="com.cjhsoftware.gerenciadorApi.domain.repository.TarefaRepositoryTest" time="0.244" displayname="Usa o repositorio para salvar uma entidade de Tarefa no banco de dados" uniqueid="[engine:junit-jupiter]/[class:com.cjhsoftware.gerenciadorApi.domain.repository.TarefaRepositoryTest]/[method:SalvaTarefaNoBDcomSucesso()]">
+      <error>java.util.NoSuchElementException: No value present&#13;
+	at java.base/java.util.Optional.get(Optional.java:143)&#13;
+	at com.cjhsoftware.gerenciadorApi.domain.repository.TarefaRepositoryTest.setUp(TarefaRepositoryTest.java:40)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="com.cjhsoftware.gerenciadorApi.domain.repository.ProjetoRepositoryTest" time="0.783" displayname="ProjetoRepositoryTest" uniqueid="[engine:junit-jupiter]/[class:com.cjhsoftware.gerenciadorApi.domain.repository.ProjetoRepositoryTest]">
+    <testcase name="SalvaProjetoNoBDcomSucesso" classname="com.cjhsoftware.gerenciadorApi.domain.repository.ProjetoRepositoryTest" time="0.783" displayname="Usa o repositorio para salvar uma entidade de Projeto no banco de dados" uniqueid="[engine:junit-jupiter]/[class:com.cjhsoftware.gerenciadorApi.domain.repository.ProjetoRepositoryTest]/[method:SalvaProjetoNoBDcomSucesso()]">
+      <failure>
+        <expected>Optional[Projeto(id=1, nome=Projeto do carro, descrição=Projeto da fabricação de um carro)]</expected>
+        <actual>Optional.empty</actual>
+        org.opentest4j.AssertionFailedError: &#13;
+expected: Optional[Projeto(id=1, nome=Projeto do carro, descrição=Projeto da fabricação de um carro)]&#13;
+ but was: Optional.empty&#13;
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)&#13;
+	at com.cjhsoftware.gerenciadorApi.domain.repository.ProjetoRepositoryTest.SalvaProjetoNoBDcomSucesso(ProjetoRepositoryTest.java:41)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+&#13;
+
+      </failure>
+    </testcase>
+  </testsuite>
+</testrun>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="java" project="gerenciadorApi" tests="3" started="3" failures="0" errors="1" ignored="0">
+  <testsuite name="com.cjhsoftware.gerenciadorApi.GerenciadorApiApplicationTests" time="1.056" displayname="GerenciadorApiApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.cjhsoftware.gerenciadorApi.GerenciadorApiApplicationTests]">
+    <testcase name="contextLoads" classname="com.cjhsoftware.gerenciadorApi.GerenciadorApiApplicationTests" time="1.056" displayname="contextLoads()" uniqueid="[engine:junit-jupiter]/[class:com.cjhsoftware.gerenciadorApi.GerenciadorApiApplicationTests]/[method:contextLoads()]"/>
+  </testsuite>
+  <testsuite name="com.cjhsoftware.gerenciadorApi.domain.repository.TarefaRepositoryTest" time="1.193" displayname="TarefaRepositoryTest" uniqueid="[engine:junit-jupiter]/[class:com.cjhsoftware.gerenciadorApi.domain.repository.TarefaRepositoryTest]">
+    <testcase name="SalvaTarefaNoBDcomSucesso" classname="com.cjhsoftware.gerenciadorApi.domain.repository.TarefaRepositoryTest" time="1.193" displayname="Usa o repositorio para salvar uma entidade de Projeto no banco de dados" uniqueid="[engine:junit-jupiter]/[class:com.cjhsoftware.gerenciadorApi.domain.repository.TarefaRepositoryTest]/[method:SalvaTarefaNoBDcomSucesso()]">
+      <error>org.springframework.dao.InvalidDataAccessApiUsageException: org.hibernate.TransientPropertyValueException: object references an unsaved transient instance - save the transient instance before flushing : com.cjhsoftware.gerenciadorApi.domain.model.Tarefa.projeto -&gt; com.cjhsoftware.gerenciadorApi.domain.model.Projeto&#13;
+	at org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:368)&#13;
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:246)&#13;
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:550)&#13;
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)&#13;
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:335)&#13;
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:152)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)&#13;
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:164)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)&#13;
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)&#13;
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)&#13;
+	at jdk.proxy2/jdk.proxy2.$Proxy129.count(Unknown Source)&#13;
+	at com.cjhsoftware.gerenciadorApi.domain.repository.TarefaRepositoryTest.SalvaTarefaNoBDcomSucesso(TarefaRepositoryTest.java:48)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+Caused by: java.lang.IllegalStateException: org.hibernate.TransientPropertyValueException: object references an unsaved transient instance - save the transient instance before flushing : com.cjhsoftware.gerenciadorApi.domain.model.Tarefa.projeto -&gt; com.cjhsoftware.gerenciadorApi.domain.model.Projeto&#13;
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:157)&#13;
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:438)&#13;
+	at org.hibernate.query.spi.AbstractSelectionQuery.getSingleResult(AbstractSelectionQuery.java:564)&#13;
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.count(SimpleJpaRepository.java:603)&#13;
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)&#13;
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)&#13;
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)&#13;
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)&#13;
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516)&#13;
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285)&#13;
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)&#13;
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:168)&#13;
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)&#13;
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)&#13;
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)&#13;
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392)&#13;
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)&#13;
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)&#13;
+	... 11 more&#13;
+Caused by: org.hibernate.TransientPropertyValueException: object references an unsaved transient instance - save the transient instance before flushing : com.cjhsoftware.gerenciadorApi.domain.model.Tarefa.projeto -&gt; com.cjhsoftware.gerenciadorApi.domain.model.Projeto&#13;
+	at org.hibernate.engine.spi.CascadingActions$8.noCascade(CascadingActions.java:372)&#13;
+	at org.hibernate.engine.internal.Cascade.cascade(Cascade.java:173)&#13;
+	at org.hibernate.event.internal.AbstractFlushingEventListener.cascadeOnFlush(AbstractFlushingEventListener.java:161)&#13;
+	at org.hibernate.event.internal.AbstractFlushingEventListener.prepareEntityFlushes(AbstractFlushingEventListener.java:144)&#13;
+	at org.hibernate.event.internal.AbstractFlushingEventListener.flushEverythingToExecutions(AbstractFlushingEventListener.java:79)&#13;
+	at org.hibernate.event.internal.DefaultAutoFlushEventListener.onAutoFlush(DefaultAutoFlushEventListener.java:52)&#13;
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)&#13;
+	at org.hibernate.internal.SessionImpl.autoFlushIfRequired(SessionImpl.java:1366)&#13;
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.lambda$new$2(ConcreteSqmSelectQueryPlan.java:136)&#13;
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.withCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:362)&#13;
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.performList(ConcreteSqmSelectQueryPlan.java:303)&#13;
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doList(QuerySqmImpl.java:509)&#13;
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:427)&#13;
+	... 33 more&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="com.cjhsoftware.gerenciadorApi.domain.repository.ProjetoRepositoryTest" time="0.204" displayname="ProjetoRepositoryTest" uniqueid="[engine:junit-jupiter]/[class:com.cjhsoftware.gerenciadorApi.domain.repository.ProjetoRepositoryTest]">
+    <testcase name="SalvaProjetoNoBDcomSucesso" classname="com.cjhsoftware.gerenciadorApi.domain.repository.ProjetoRepositoryTest" time="0.204" displayname="Usa o repositorio para salvar uma entidade de Projeto no banco de dados" uniqueid="[engine:junit-jupiter]/[class:com.cjhsoftware.gerenciadorApi.domain.repository.ProjetoRepositoryTest]/[method:SalvaProjetoNoBDcomSucesso()]"/>
+  </testsuite>
+</testrun>

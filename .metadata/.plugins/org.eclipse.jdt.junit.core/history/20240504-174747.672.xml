@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TarefaRepositoryTest" project="gerenciadorApi" tests="1" started="1" failures="1" errors="0" ignored="0">
+  <testsuite name="com.cjhsoftware.gerenciadorApi.domain.repository.TarefaRepositoryTest" time="1.987" displayname="TarefaRepositoryTest" uniqueid="[engine:junit-jupiter]/[class:com.cjhsoftware.gerenciadorApi.domain.repository.TarefaRepositoryTest]">
+    <testcase name="SalvaTarefaNoBDcomSucesso" classname="com.cjhsoftware.gerenciadorApi.domain.repository.TarefaRepositoryTest" time="1.987" displayname="Usa o repositorio para salvar uma entidade de Projeto no banco de dados" uniqueid="[engine:junit-jupiter]/[class:com.cjhsoftware.gerenciadorApi.domain.repository.TarefaRepositoryTest]/[method:SalvaTarefaNoBDcomSucesso()]">
+      <failure>
+        <expected>Optional[Tarefa(id=1, titulo=Aerodinamica, descricao=Estudar a aerodinamica do carros, dataVencimento=Sat May 04 17:47:48 BRT 2024, status=PENDENTE, prioridade=true, projeto=null)]</expected>
+        <actual>Optional[Tarefa(id=1, titulo=Aerodinamica, descricao=Estudar a aerodinamica do carros, dataVencimento=2024-05-04 17:47:48.598, status=PENDENTE, prioridade=true, projeto=null)]</actual>
+        org.opentest4j.AssertionFailedError: &#13;
+expected: Optional[Tarefa(id=1, titulo=Aerodinamica, descricao=Estudar a aerodinamica do carros, dataVencimento=Sat May 04 17:47:48 BRT 2024, status=PENDENTE, prioridade=true, projeto=null)]&#13;
+ but was: Optional[Tarefa(id=1, titulo=Aerodinamica, descricao=Estudar a aerodinamica do carros, dataVencimento=2024-05-04 17:47:48.598, status=PENDENTE, prioridade=true, projeto=null)]&#13;
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)&#13;
+	at com.cjhsoftware.gerenciadorApi.domain.repository.TarefaRepositoryTest.SalvaTarefaNoBDcomSucesso(TarefaRepositoryTest.java:49)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+&#13;
+
+      </failure>
+    </testcase>
+  </testsuite>
+</testrun>

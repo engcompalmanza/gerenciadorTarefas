@@ -1,0 +1,27 @@
+package com.cjhsoftware.gerenciadorApi.domain.model;
+
+import java.util.Date;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.OneToOne;
+import lombok.Data;
+
+@Entity
+@Data
+public class Tarefa {
+	
+	private Long id;
+	
+	private String titulo;
+	
+	private String descricao;
+	
+	private Date dataVencimento;
+	
+	private StatusTarefa status;
+	
+	private Boolean prioridade;
+	
+	@OneToOne
+	private Projeto projeto;
+}

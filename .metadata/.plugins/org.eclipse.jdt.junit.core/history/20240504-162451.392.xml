@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="java" project="gerenciadorApi" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="com.cjhsoftware.gerenciadorApi.GerenciadorApiApplicationTests" time="0.962" displayname="GerenciadorApiApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.cjhsoftware.gerenciadorApi.GerenciadorApiApplicationTests]">
+    <testcase name="contextLoads" classname="com.cjhsoftware.gerenciadorApi.GerenciadorApiApplicationTests" time="0.962" displayname="contextLoads()" uniqueid="[engine:junit-jupiter]/[class:com.cjhsoftware.gerenciadorApi.GerenciadorApiApplicationTests]/[method:contextLoads()]"/>
+  </testsuite>
+  <testsuite name="com.cjhsoftware.gerenciadorApi.domain.repository.ProjetoRepositoryTest" time="0.654" displayname="ProjetoRepositoryTest" uniqueid="[engine:junit-jupiter]/[class:com.cjhsoftware.gerenciadorApi.domain.repository.ProjetoRepositoryTest]">
+    <testcase name="SalvaNoBDcomSucesso" classname="com.cjhsoftware.gerenciadorApi.domain.repository.ProjetoRepositoryTest" time="0.654" displayname="Usa o repositorio para salvar uma entidade de Projeto no banco de dados" uniqueid="[engine:junit-jupiter]/[class:com.cjhsoftware.gerenciadorApi.domain.repository.ProjetoRepositoryTest]/[method:SalvaNoBDcomSucesso()]"/>
+  </testsuite>
+</testrun>

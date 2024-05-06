@@ -1,0 +1,29 @@
+package com.cjhsoftware.gerenciadorApi.domain.repository;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ActiveProfiles;
+
+import com.cjhsoftware.gerenciadorApi.domain.model.Projeto;
+
+@ActiveProfiles("test")
+public class ProjetoRepositoryTest {
+	
+	@Autowired
+	ProjetoRepository projetoRepository;
+	
+	Projeto projeto;
+	
+	@BeforeEach
+	void setUp() {
+		projeto = new Projeto(null, "Projeto do carro", "Projeto da fabricação de um carro");
+	}
+	
+	@Test
+	@DisplayName("Usa o repositorio para salvar uma entidade de Projeto no banco de dados")
+	void SalvaNoBDcomSucesso() {
+		
+	}
+}

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="java" project="gerenciadorApi" tests="3" started="3" failures="0" errors="1" ignored="0">
+  <testsuite name="com.cjhsoftware.gerenciadorApi.GerenciadorApiApplicationTests" time="1.151" displayname="GerenciadorApiApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.cjhsoftware.gerenciadorApi.GerenciadorApiApplicationTests]">
+    <testcase name="contextLoads" classname="com.cjhsoftware.gerenciadorApi.GerenciadorApiApplicationTests" time="1.151" displayname="contextLoads()" uniqueid="[engine:junit-jupiter]/[class:com.cjhsoftware.gerenciadorApi.GerenciadorApiApplicationTests]/[method:contextLoads()]"/>
+  </testsuite>
+  <testsuite name="com.cjhsoftware.gerenciadorApi.domain.repository.TarefaRepositoryTest" time="0.829" displayname="TarefaRepositoryTest" uniqueid="[engine:junit-jupiter]/[class:com.cjhsoftware.gerenciadorApi.domain.repository.TarefaRepositoryTest]">
+    <testcase name="SalvaNoBDcomSucesso" classname="com.cjhsoftware.gerenciadorApi.domain.repository.TarefaRepositoryTest" time="0.829" displayname="Usa o repositorio para salvar uma entidade de Projeto no banco de dados" uniqueid="[engine:junit-jupiter]/[class:com.cjhsoftware.gerenciadorApi.domain.repository.TarefaRepositoryTest]/[method:SalvaNoBDcomSucesso()]">
+      <error>org.springframework.orm.jpa.JpaObjectRetrievalFailureException: Unable to find com.cjhsoftware.gerenciadorApi.domain.model.Projeto with id 1&#13;
+	at org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:376)&#13;
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:246)&#13;
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:550)&#13;
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)&#13;
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:335)&#13;
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:152)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)&#13;
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:164)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)&#13;
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)&#13;
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)&#13;
+	at jdk.proxy2/jdk.proxy2.$Proxy128.save(Unknown Source)&#13;
+	at com.cjhsoftware.gerenciadorApi.domain.repository.TarefaRepositoryTest.SalvaNoBDcomSucesso(TarefaRepositoryTest.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+Caused by: jakarta.persistence.EntityNotFoundException: Unable to find com.cjhsoftware.gerenciadorApi.domain.model.Projeto with id 1&#13;
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$JpaEntityNotFoundDelegate.handleEntityNotFound(EntityManagerFactoryBuilderImpl.java:191)&#13;
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:212)&#13;
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadWithRegularProxy(DefaultLoadEventListener.java:290)&#13;
+	at org.hibernate.event.internal.DefaultLoadEventListener.proxyOrLoad(DefaultLoadEventListener.java:242)&#13;
+	at org.hibernate.event.internal.DefaultLoadEventListener.doOnLoad(DefaultLoadEventListener.java:111)&#13;
+	at org.hibernate.event.internal.DefaultLoadEventListener.onLoad(DefaultLoadEventListener.java:68)&#13;
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)&#13;
+	at org.hibernate.internal.SessionImpl.fireLoadNoChecks(SessionImpl.java:1222)&#13;
+	at org.hibernate.internal.SessionImpl.internalLoad(SessionImpl.java:1068)&#13;
+	at org.hibernate.type.EntityType.resolveIdentifier(EntityType.java:694)&#13;
+	at org.hibernate.type.EntityType.resolve(EntityType.java:417)&#13;
+	at org.hibernate.type.EntityType.replace(EntityType.java:340)&#13;
+	at org.hibernate.type.AbstractType.replace(AbstractType.java:125)&#13;
+	at org.hibernate.type.TypeHelper.replace(TypeHelper.java:154)&#13;
+	at org.hibernate.event.internal.DefaultMergeEventListener.copyValues(DefaultMergeEventListener.java:614)&#13;
+	at org.hibernate.event.internal.DefaultMergeEventListener.entityIsTransient(DefaultMergeEventListener.java:296)&#13;
+	at org.hibernate.event.internal.DefaultMergeEventListener.entityIsDetached(DefaultMergeEventListener.java:418)&#13;
+	at org.hibernate.event.internal.DefaultMergeEventListener.merge(DefaultMergeEventListener.java:208)&#13;
+	at org.hibernate.event.internal.DefaultMergeEventListener.doMerge(DefaultMergeEventListener.java:146)&#13;
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:130)&#13;
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:84)&#13;
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)&#13;
+	at org.hibernate.internal.SessionImpl.fireMerge(SessionImpl.java:847)&#13;
+	at org.hibernate.internal.SessionImpl.merge(SessionImpl.java:833)&#13;
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:319)&#13;
+	at jdk.proxy2/jdk.proxy2.$Proxy125.merge(Unknown Source)&#13;
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:621)&#13;
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)&#13;
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)&#13;
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)&#13;
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)&#13;
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516)&#13;
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285)&#13;
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)&#13;
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:168)&#13;
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)&#13;
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)&#13;
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)&#13;
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392)&#13;
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)&#13;
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)&#13;
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)&#13;
+	... 11 more&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="com.cjhsoftware.gerenciadorApi.domain.repository.ProjetoRepositoryTest" time="0.242" displayname="ProjetoRepositoryTest" uniqueid="[engine:junit-jupiter]/[class:com.cjhsoftware.gerenciadorApi.domain.repository.ProjetoRepositoryTest]">
+    <testcase name="SalvaNoBDcomSucesso" classname="com.cjhsoftware.gerenciadorApi.domain.repository.ProjetoRepositoryTest" time="0.242" displayname="Usa o repositorio para salvar uma entidade de Projeto no banco de dados" uniqueid="[engine:junit-jupiter]/[class:com.cjhsoftware.gerenciadorApi.domain.repository.ProjetoRepositoryTest]/[method:SalvaNoBDcomSucesso()]"/>
+  </testsuite>
+</testrun>

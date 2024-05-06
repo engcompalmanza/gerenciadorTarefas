@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="java" project="gerenciadorApi" tests="3" started="3" failures="2" errors="0" ignored="0">
+  <testsuite name="com.cjhsoftware.gerenciadorApi.GerenciadorApiApplicationTests" time="1.157" displayname="GerenciadorApiApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.cjhsoftware.gerenciadorApi.GerenciadorApiApplicationTests]">
+    <testcase name="contextLoads" classname="com.cjhsoftware.gerenciadorApi.GerenciadorApiApplicationTests" time="1.157" displayname="contextLoads()" uniqueid="[engine:junit-jupiter]/[class:com.cjhsoftware.gerenciadorApi.GerenciadorApiApplicationTests]/[method:contextLoads()]"/>
+  </testsuite>
+  <testsuite name="com.cjhsoftware.gerenciadorApi.domain.repository.TarefaRepositoryTest" time="1.352" displayname="TarefaRepositoryTest" uniqueid="[engine:junit-jupiter]/[class:com.cjhsoftware.gerenciadorApi.domain.repository.TarefaRepositoryTest]">
+    <testcase name="SalvaNoBDcomSucesso" classname="com.cjhsoftware.gerenciadorApi.domain.repository.TarefaRepositoryTest" time="1.352" displayname="Usa o repositorio para salvar uma entidade de Projeto no banco de dados" uniqueid="[engine:junit-jupiter]/[class:com.cjhsoftware.gerenciadorApi.domain.repository.TarefaRepositoryTest]/[method:SalvaNoBDcomSucesso()]">
+      <failure>
+        <expected>Optional[Tarefa(id=1, titulo=Aerodinamica, descricao=Estudar a aerodinamica do carros, dataVencimento=Sat May 04 17:27:00 BRT 2024, status=PENDENTE, prioridade=true, projeto=Projeto(id=1, nome=Projeto do carro, descrição=Projeto da fabricação de um carro))]</expected>
+        <actual>Optional[Tarefa(id=1, titulo=Aerodinamica, descricao=Estudar a aerodinamica do carros, dataVencimento=2024-05-04 17:27:00.815, status=PENDENTE, prioridade=true, projeto=Projeto(id=1, nome=Projeto do carro, descrição=Projeto da fabricação de um carro))]</actual>
+        org.opentest4j.AssertionFailedError: &#13;
+expected: Optional[Tarefa(id=1, titulo=Aerodinamica, descricao=Estudar a aerodinamica do carros, dataVencimento=Sat May 04 17:27:00 BRT 2024, status=PENDENTE, prioridade=true, projeto=Projeto(id=1, nome=Projeto do carro, descrição=Projeto da fabricação de um carro))]&#13;
+ but was: Optional[Tarefa(id=1, titulo=Aerodinamica, descricao=Estudar a aerodinamica do carros, dataVencimento=2024-05-04 17:27:00.815, status=PENDENTE, prioridade=true, projeto=Projeto(id=1, nome=Projeto do carro, descrição=Projeto da fabricação de um carro))]&#13;
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)&#13;
+	at com.cjhsoftware.gerenciadorApi.domain.repository.TarefaRepositoryTest.SalvaNoBDcomSucesso(TarefaRepositoryTest.java:50)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+&#13;
+
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="com.cjhsoftware.gerenciadorApi.domain.repository.ProjetoRepositoryTest" time="0.037" displayname="ProjetoRepositoryTest" uniqueid="[engine:junit-jupiter]/[class:com.cjhsoftware.gerenciadorApi.domain.repository.ProjetoRepositoryTest]">
+    <testcase name="SalvaNoBDcomSucesso" classname="com.cjhsoftware.gerenciadorApi.domain.repository.ProjetoRepositoryTest" time="0.037" displayname="Usa o repositorio para salvar uma entidade de Projeto no banco de dados" uniqueid="[engine:junit-jupiter]/[class:com.cjhsoftware.gerenciadorApi.domain.repository.ProjetoRepositoryTest]/[method:SalvaNoBDcomSucesso()]">
+      <failure>
+        <expected>Optional[Projeto(id=1, nome=Projeto do carro, descrição=Projeto da fabricação de um carro)]</expected>
+        <actual>Optional.empty</actual>
+        org.opentest4j.AssertionFailedError: &#13;
+expected: Optional[Projeto(id=1, nome=Projeto do carro, descrição=Projeto da fabricação de um carro)]&#13;
+ but was: Optional.empty&#13;
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)&#13;
+	at com.cjhsoftware.gerenciadorApi.domain.repository.ProjetoRepositoryTest.SalvaNoBDcomSucesso(ProjetoRepositoryTest.java:41)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+&#13;
+
+      </failure>
+    </testcase>
+  </testsuite>
+</testrun>

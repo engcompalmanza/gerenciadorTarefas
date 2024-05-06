@@ -1,0 +1,54 @@
+package com.cjhsoftware.gerenciadorApi.domain.repository;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.Date;
+import java.util.Optional;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+
+import com.cjhsoftware.gerenciadorApi.domain.model.Projeto;
+import com.cjhsoftware.gerenciadorApi.domain.model.StatusTarefa;
+import com.cjhsoftware.gerenciadorApi.domain.model.Tarefa;
+
+@DataJpaTest
+@ActiveProfiles("test")
+public class TarefaRepositoryTest {
+	
+//	@Autowired
+//	ProjetoRepository projetoRepository;
+	
+	@Autowired
+	TarefaRepository tarefaRepository;
+	
+	Tarefa tarefa;
+	Projeto projeto;
+
+	@BeforeEach
+	void setUp() {
+//		projeto = new Projeto(2L, "Projeto do carro", "Projeto da fabricação de um carro");
+//		this.projetoRepository.save(projeto);
+		tarefa = new Tarefa(1L, "Aerodinamica", "Estudar a aerodinamica do carros", 
+				null, StatusTarefa.PENDENTE, true, null );
+	}
+	
+	@Test
+	@DisplayName("Usa o repositorio para salvar uma entidade de Tarefa no banco de dados")
+	void SalvaTarefaNoBDcomSucesso() {
+		assertEquals(0, tarefaRepository.count());
+
+		this.tarefaRepository.save(tarefa);
+		
+		assertEquals(1, tarefaRepository.count());
+		//assertThat(tarefaRepository.findById(tarefa.getId())).isEqualTo(Optional.of(tarefa));
+	}
+
+}

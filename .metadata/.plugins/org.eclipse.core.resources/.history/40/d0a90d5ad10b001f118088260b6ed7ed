@@ -1,0 +1,48 @@
+package com.cjhsoftware.gerenciadorApi.domain.repository;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.test.context.ActiveProfiles;
+
+import com.cjhsoftware.gerenciadorApi.domain.model.Projeto;
+import com.cjhsoftware.gerenciadorApi.domain.model.Tarefa;
+import com.cjhsoftware.gerenciadorApi.domain.model.Usuario;
+
+@DataJpaTest
+@ActiveProfiles("test")
+public class UsuarioRepositoryTest {
+	
+	@Autowired
+	ProjetoRepository projetoRepository;
+	
+	@Autowired
+	TarefaRepository tarefaRepository;
+	
+	@Autowired
+	UsuarioRepository usuarioRepository;
+	
+	Tarefa tarefa;
+	Projeto projeto;
+	Usuario usuario;
+
+	@BeforeEach
+	void setUp() {
+//		projeto = new Projeto(2L, "Projeto do carro", "Projeto da fabricação de um carro");
+//		tarefa = new Tarefa(1L, "Aerodinamica", "Estudar a aerodinamica do carros", 
+//				null, StatusTarefa.PENDENTE, true, projeto );
+		usuario = new Usuario(null, "jose", "jose@gmail.com", "12345", null);
+	}
+	
+//	@Test
+//	@DisplayName("Usa o repositorio para salvar uma entidade de Tarefa no banco de dados")
+//	void SalvaTarefaNoBDcomSucesso() {
+//		assertEquals(0, tarefaRepository.count());
+//
+//		this.tarefaRepository.save(tarefa);
+//		
+//		assertEquals(1, tarefaRepository.count());
+//		assertThat(tarefaRepository.findById(tarefa.getId())).isEqualTo(Optional.of(tarefa));
+//	}
+
+}

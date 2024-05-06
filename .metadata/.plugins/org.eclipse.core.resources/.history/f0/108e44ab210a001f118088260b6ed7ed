@@ -1,0 +1,5 @@
+package com.cjhsoftware.gerenciadorApi.domain;
+
+public class Tarefa {
+
+}

@@ -1,0 +1,41 @@
+package com.cjhsoftware.gerenciadorApi.domain.repository;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.Optional;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+
+import com.cjhsoftware.gerenciadorApi.domain.model.Projeto;
+
+@DataJpaTest
+@ActiveProfiles("test")
+public class ProjetoRepositoryTest {
+	
+	@Autowired
+	ProjetoRepository projetoRepository;
+	
+	Projeto projeto;
+	
+	@BeforeEach
+	void setUp() {
+		projeto = new Projeto(1L, "Projeto do carro", "Projeto da fabricação de um carro");
+	}
+	
+	@Test
+	@DisplayName("Usa o repositorio para salvar uma entidade de Projeto no banco de dados")
+	void SalvaNoBDcomSucesso() {
+		this.projetoRepository.save(projeto);
+		
+		assertEquals(1, projetoRepository.count());
+		assertThat(projetoRepository.findById(projeto.getId())).isEqualTo(Optional.of(projeto));
+	}
+}

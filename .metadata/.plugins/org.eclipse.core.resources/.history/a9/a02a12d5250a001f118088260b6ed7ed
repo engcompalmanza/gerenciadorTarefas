@@ -1,0 +1,47 @@
+package com.cjhsoftware.gerenciadorApi;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+import com.cjhsoftware.gerenciadorApi.domain.model.Projeto;
+import com.cjhsoftware.gerenciadorApi.domain.repository.ProjetoRepository;
+import com.cjhsoftware.gerenciadorApi.domain.repository.TarefaRepository;
+import com.cjhsoftware.gerenciadorApi.domain.repository.UsuarioRepository;
+
+@SpringBootApplication
+public class GerenciadorApiApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(GerenciadorApiApplication.class, args);
+	}
+	
+	private static final Logger log = LoggerFactory.getLogger(GerenciadorApiApplication.class);
+	
+	@Bean
+	  public CommandLineRunner demo(ProjetoRepository pr, TarefaRepository tr, UsuarioRepository ur) {
+	    return (args) -> {
+	    	
+	    	pr.save(new Projeto(null, "Projeto 1: carro novo", "Projeto de um carro novo"));
+	    	
+	    	tr.save(new Tarefa());
+	    	
+	   // Imprime no console os dados cadastrados em Memoria para verificação  
+	      log.info("Todos os dados cadastrados em memoria:");
+	      log.info("--------------Projetos-----------------");
+	      pr.findAll().forEach(projeto -> {
+	    	System.out.println(projeto.toString());
+	        //log.info(estado.toString());
+	      });
+	      
+	      log.info("");
+	      
+	    };
+	  }
+
+
+}

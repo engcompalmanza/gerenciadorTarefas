@@ -1,0 +1,3 @@
+spring.application.name=gerenciadorApi
+
+spring.jpa.show-sql= true
